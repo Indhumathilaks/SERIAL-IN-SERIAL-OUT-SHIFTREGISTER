@@ -43,6 +43,22 @@ Developed by:INDHUMATHI L
 
 RegisterNumber:24900500
 
+```
+module exp10(clk, sin, q);
+input clk;
+input sin;
+output [3:0] q;
+reg [3:0] q;
+always @(posedge clk)
+begin
+q[0] <= sin;
+q[1] <= q[0];
+q[2] <= q[1];
+q[3] <= q[2];
+end 
+endmodule
+```
+
 **RTL LOGIC FOR SISO Shift Register**
 
 ![image](https://github.com/user-attachments/assets/54658297-748d-468c-93e1-23741d181105)
